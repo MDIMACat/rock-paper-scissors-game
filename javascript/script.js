@@ -5,7 +5,7 @@ function getComputerChoice () {
     // Generates a random index value based on list length
     const result = Math.floor(Math.random() * list.length);
     // Displaying the chosen element in the list
-    return list[result]
+    return list[result];
 }
 
 // getUserChoice: a function used to get user input using a prompt method
@@ -14,7 +14,7 @@ function getUserChoice() {
     return userInput.toLowerCase();
 }
 
-// Function expression that turns user input to lowercase
+// Calling the getUserChoice function
 const playerSelection = getUserChoice();
 // Calling the getComputerChoice function
 const computerSelection = getComputerChoice();
@@ -46,6 +46,4 @@ function playRound(playerSelection, computerSelection) {
 }
 
 // Calling the playRound, to play a singleround of rock-paper-scissors
-playRound(playerSelection, computerSelection)
-
-
+playRound(playerSelection, computerSelection);

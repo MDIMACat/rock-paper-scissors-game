@@ -8,8 +8,14 @@ function getComputerChoice () {
     return list[result]
 }
 
+// getUserChoice: a function used to get user input using a prompt method
+function getUserChoice() {
+    const userInput = prompt("Rock, Paper, Scissors: ");
+    return userInput.toLowerCase();
+}
+
 // Function expression that turns user input to lowercase
-const playerSelection = 'rock'
+const playerSelection = getUserChoice();
 // Calling the getComputerChoice function
 const computerSelection = getComputerChoice();
 
@@ -34,7 +40,9 @@ function playRound(playerSelection, computerSelection) {
         console.log("You win! Scissors beats paper");
     } else if (playerSelection === 'scissors' && computerSelection === 'scissors') {
         console.log("It's a tie");
-    } 
+    } else {
+        console.log('Invalid entry, Try Again')
+    }
 }
 
 // Calling the playRound, to play a singleround of rock-paper-scissors

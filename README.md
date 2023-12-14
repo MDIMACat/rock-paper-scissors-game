@@ -1,1 +1,1 @@
-# rock-paper-scissors-game
+# ROCK PAPER SCISSORS CONSOLE

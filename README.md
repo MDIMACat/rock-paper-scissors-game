@@ -41,6 +41,6 @@ This is a simple console-based Rock, Paper, Scissors game implemented in JavaScr
 
 ## Author
 
-This Rock, Paper, Scissors game was created by [Siduduzile Snenhlanhla Mdima].
+This Rock, Paper, Scissors game was created by Siduduzile Snenhlanhla Mdima.
 
 Feel free to contribute to the project by submitting pull requests or reporting issues on the GitHub repository.

@@ -1,0 +1,128 @@
+.odibee-sans-regular {
+  font-family: "Odibee Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Odibee Sans", sans-serif;
+}
+
+#image-heading, #score-board-title, #hand-gif, #score-board, #players-icons, #labels, #input, #submit-button, #footer-text {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#welcome-text{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+#welcome-text h1{
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+
+#welcome-text p{
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+#image-heading img{
+    width: 50rem;
+    height: 50rem;
+}
+
+#score-board-title h2{
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+
+#hand-gif img{
+    width: 15rem;
+    height: 15rem;
+} 
+
+#user-score, #computer-score{
+    font-size: 2rem;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 20px;
+    padding: 2rem 2rem;
+    background-color: #F4F2F2;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#player, #computer{
+    margin-top: 20px;
+}
+
+#computer img{
+    width: 20rem;
+    height: 20rem;
+    margin-right: 25px;
+}
+
+#players-icons img{
+    padding-right: 15px;
+}
+
+#user-label{
+    font-size: 3rem;
+    letter-spacing: 1px;
+    padding-left: 25px;
+}
+
+#computer-label{
+    font-size: 3rem;
+    letter-spacing: 1px;
+}
+
+#user-input input, #computer-input input{
+    font-size: 1em;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 20px;
+    padding: 1rem 2rem;
+    background-color: #F4F2F2;
+    box-shadow: 0.5px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#user-input input{
+    margin-left: 20px;
+}
+
+#submit-button button{
+    font-size: 1em;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 20px;
+    padding: 1rem 2rem;
+    background-color: #F4F2F2;
+    box-shadow: 0.5px 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    margin-top: 25px;
+    margin-right: 45px;
+    color: #4b4b4b;
+}
+
+#submit-button button:hover{
+    background-color: #7ac759;
+}
+
+#footer-text p{
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: 70px;
+}
+
+#footer-text a{
+    text-decoration: none;
+    color: #e77811;
+}

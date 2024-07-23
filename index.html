@@ -3,11 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
     <title>Rock Paper Scissors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Hello</h1>
-    <!--JAVASCRIPT CODE-->
-    <script src="./javascript/script.js"></script>
+    <header>
+        <div class="image-heading" id="image-heading">
+            <img src="./images/heading.png" alt="Image with the words rock paper scissors">
+        </div>
+    </header>
+   <main>
+    <section>
+        <div class="welcome-text" id="welcome-text">
+            <h1>Welcome</h1>
+            <p>Test your skills against our machine in the classic game of Rock-Paper-Scissors! <br>Challenge the computer, make your move, and see if you have what it takes to outsmart it. <br> Will you choose rock, paper, or scissors? The rules are simple, but the strategy can be complex.<br> Are you ready to play and claim your victory?</p>
+        </div>
+        <div class="hand-gif" id="hand-gif">
+            <img src="./images/rick-paper-scissor-animation.gif" alt="Rock hand gesture">
+        </div>
+        <div class="score-board-title" id="score-board-title">
+            <h2>Scores:</h2>
+        </div>
+        <div class="score-board" id="score-board">
+            <div class="user-score" id="user-score">0</div>
+            <div class="computer-score" id="computer-score">0</div>
+        </div>
+    </section>
+    <section>
+        <div class="players-icons" id="players-icons">
+            <div class="player" id="player">
+                <img src="./images/user-animation.gif" alt="Player gif">
+            </div>
+            <div class="computer" id="computer">
+                <img src="./images/laptop-animation.gif" alt="laptop gif" >
+            </div>
+        </div>
+
+    </section>
+    <section>
+        <div class="labels" id="labels">
+            <div class="user-label" id="user-label">
+                <p>Player</p>
+            </div>
+            <div class="computer-label" id="computer-label">
+                <p>Computer</p>
+            </div>
+        </div>
+        <div class="input" id="input">
+            <div class="user-input" id="user-input">
+                <label for="rock-paper-scissors-input"></label>
+                <input type="text" id="rock-paper-scissors-input" placeholder="Enter your move">
+            </div>
+            <div class="computer-input" id="computer-input">
+                <label for="rock-paper-scissors-input"></label>
+                <input type="text" id="rock-paper-scissors-input" placeholder="Computer's move">
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="submit-button" id="submit-button">
+            <button id="submit">Submit</button>
+            <div class="placeh"></div>
+        </div>
+    </section>
+
+   </main>
+    <footer>
+         <div class="footer-text" id="footer-text">
+              <p>Created by <a href="https://mdimacat.github.io/personal-portfolio/" target="_blank" rel="noopener">Siduduzile Snenhlanhla Mdima</a></p>
+            </div>
+    <script src="./dist/bundle.js"></script>
 </body>
 </html>

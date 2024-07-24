@@ -10,7 +10,7 @@ body {
     font-family: "Odibee Sans", sans-serif;
 }
 
-#image-heading, #score-board-title, #hand-gif, #score-board, #players-icons, #labels, #input, #submit-button, #footer-text {
+#image-heading, #score-board-title, #hand-gif, #score-board, #players-icons, #labels, #input, #submit-button, #footer-text, #error-message-section {
     display: flex;
     justify-content: space-around;
     align-items: center;

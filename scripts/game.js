@@ -1,61 +1,67 @@
+const { outcomeMessages } = require('./helper_object')
+
 class Game {
-    constructor() {
-        this.turns = 5;
-        this.resultList = [];
-        this.currentInput = '';
-    }
+  constructor() {
+    this.userInput = "";    
+    this.computerInput = "";
+  }
 
-    getComputerChoice () {
-        const list = ['rock', 'paper', 'scissors'];
-        const result = Math.floor(Math.random() * list.length);
-        return list[result];
-    }
+  getComputerChoice() {
+    const list = ["rock", "paper", "scissors"];
+    const result = Math.floor(Math.random() * list.length);
+    this.computerInput = list[result];
+    return this.computerInput;
+  }
 
-    getUserChoice(input) {
-        const list = ['rock', 'paper', 'scissors'];
-        if (list.includes(input)) {
-            this.currentInput = input;
-            return this.currentInput.toLowerCase();
-        } else {
-            return ('Invalid entry, Try Again')
-        }
+  getUserChoice(input) {
+    const list = ["rock", "paper", "scissors"];
+    if (list.includes(input)) {
+      this.userInput = input;
+      return this.userInput.toLowerCase();
+    } else {
+      return "Invalid entry, Try Again";
     }
+  }
 
-    playRound(playerSelection, computerSelection) {
-        if (playerSelection === 'rock' && computerSelection === 'rock') {
-            return ("It's a tie");
-        } else if (playerSelection === 'rock' && computerSelection === 'paper') {
-            return ("You lose! Paper beats rock");
-        } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
-            return ("You win! Rock beats scissors");
-        } else if (playerSelection === 'paper' && computerSelection === 'rock') {
-            return ("You win! Paper beats rock");
-        } else if (playerSelection === 'paper' && computerSelection === 'paper') {
-            return ("It's a tie");
-        } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
-            return ("You lose! Scissors beats paper");
-        } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
-            return ("You lose! Rock beats scissors");
-        } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
-            return ("You win! Scissors beats paper");
-        } else if (playerSelection === 'scissors' && computerSelection === 'scissors') {
-            return ("It's a tie");
-        } else {
-            return ('Invalid entry, Try Again')
-        }
+  playRound(playerSelection, computerSelection) {
+    if (playerSelection === "rock" && computerSelection === "rock") {
+      return outcomeMessages.tie;
+    } else if (playerSelection === "rock" && computerSelection === "paper") {
+      return outcomeMessages.computerWin;
+    } else if (playerSelection === "rock" && computerSelection === "scissors") {
+      return outcomeMessages.playerWin;
+    } else if (playerSelection === "paper" && computerSelection === "rock") {
+      return outcomeMessages.playerWin;
+    } else if (playerSelection === "paper" && computerSelection === "paper") {
+      return outcomeMessages.tie;
+    } else if (
+      playerSelection === "paper" &&
+      computerSelection === "scissors"
+    ) {
+      return outcomeMessages.computerWin;
+    } else if (playerSelection === "scissors" && computerSelection === "rock") {
+      return outcomeMessages.computerWin;
+    } else if (
+      playerSelection === "scissors" &&
+      computerSelection === "paper"
+    ) {
+      return outcomeMessages.playerWin;
+    } else if (
+      playerSelection === "scissors" &&
+      computerSelection === "scissors"
+    ) {
+      return outcomeMessages.tie;
+    } else {
+      return "Invalid entry, Try Again";
     }
+  }
 
-    game () {
-        for (let i = 0; i < this.turns; i++)
-        {
-            const playerSelection = this.getUserChoice(input);
-            const computerSelection = this.getComputerChoice();
-            const result = this.playRound(playerSelection, computerSelection)
-            console.log(result)
-            this.resultList.push(result)
-        }
-        console.log(this.resultList)
-    }
+  game() {
+    const playerSelection = this.currentInput;
+    const computerSelection = this.computerInput;
+    const result = this.playRound(playerSelection, computerSelection);
+    return result;
+  }
 }
 
-module.exports = { Game }
+module.exports = { Game };

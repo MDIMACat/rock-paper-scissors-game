@@ -1,43 +1,48 @@
-# Rock, Paper, Scissors Console Game
+# Rock, Paper, Scissors GUI Game
 
-This is a simple console-based Rock, Paper, Scissors game implemented in JavaScript.
+This is a simple GUI-based Rock, Paper, Scissors game implemented in JavaScript with a basic user interface created using HTML and CSS. The JavaScript files are bundled using Webpack.
 
 ## How to Play
 
 1. **Clone Repository**: Clone this repository to your local machine.
-2. **Open in Browser**: Open the `index.html` file in your preferred web browser.
-3. **Open Console**: Open the developer console in your browser (usually by right-clicking on the page, selecting "Inspect", and then choosing the "Console" tab).
-4. **Run Game**: The game will start automatically and prompt you to choose rock, paper, or scissors for each round.
-5. **Follow Prompts**: Enter your choice when prompted and see the result in the console.
-6. **Repeat**: The game will continue for a set number of rounds (currently set to 5), and the results of each round will be displayed in the console.
-7. **End Game**: After the specified number of rounds, the game will end.
+2. **Install Dependencies**: Navigate to the project directory and run `npm install` to install the required dependencies.
+3. **Build the Project**: Run `npm run build` to bundle the JavaScript files using Webpack.
+4. **Open in Browser**: Open the `index.html` file in your preferred web browser.
+5. **Play Game**: Use the GUI to choose rock, paper, or scissors for each round.
+6. **View Results**: The results of each round will be displayed on the screen.
+7. **Reset**: The game will continue until you click the reset button, and the results of each round will be displayed on the screen.
+8. 
 
 ## Files
 
-- `script.js`: Contains the JavaScript code for the game logic.
-- `style.css`: CSS file for styling (not yet implemented).
-- `index.html`: HTML file for displaying the game (not yet implemented).
+- `images/`: Contains images being displayed in the GUI.
+- `dist/bundle.js`: Contains the bundled JavaScript logic for the game logic.
+- `scripts/script.js`: Contains the JavaScript code for the game logic.
+- `scripts/game.js`: Contains the Game class used for the game logic.
+- `scripts/helper_object.js`: Contains a outcome object used for the game logic.
+- `styles/style.css`: CSS file for styling the game.
+- `index.html`: HTML file for displaying the game interface.
+- `webpack.config.js`: Configuration file for Webpack.
+- `package.json`: Lists the project dependencies and scripts.
 
 ## Functions
 
 - **getComputerChoice**: Generates a random choice (rock, paper, or scissors) for the computer.
-- **getUserChoice**: Prompts the user to input their choice (rock, paper, or scissors).
+- **getUserChoice**: Captures the user's choice from the GUI.
 - **playRound**: Determines the winner of a single round based on the player's and computer's choices.
-- **game**: Runs the game for a specified number of rounds and displays the results.
 
 ## Future Improvements
 
-- Implement HTML and CSS to create a user interface for the game.
-- Add styling to make the game visually appealing.
-- Allow users to input the number of rounds they want to play.
+- Enhance the user interface with more advanced styling.
 - Display the overall winner at the end of the game.
 - Add sound effects for a more immersive experience.
 
 ## Technologies Used
 
 - JavaScript
-- HTML (planned)
-- CSS (planned)
+- HTML
+- CSS
+- Webpack
 
 ## Author
 

@@ -55,13 +55,6 @@ class Game {
       return "Invalid entry, Try Again";
     }
   }
-
-  game() {
-    const playerSelection = this.currentInput;
-    const computerSelection = this.computerInput;
-    const result = this.playRound(playerSelection, computerSelection);
-    return result;
-  }
 }
 
 module.exports = { Game };

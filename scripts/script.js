@@ -12,6 +12,8 @@ function createGame(){
 document.addEventListener('DOMContentLoaded', (event) => {
     document.getElementById('submit').addEventListener('click', (event) => {
         event.preventDefault()
+        let computerScore = 0
+        let userScore = 0
         
         const input = document.getElementById('rock-paper-scissors-input-user').value
         const game = createGame()
@@ -28,11 +30,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
             const gameResult = game.playRound(result, computerAnswer)
 
             if(gameResult === outcomeMessages.computerWin){
+                let currentPoints = document.getElementById('computer-score').innerText
+                computerScore = parseInt(currentPoints) + 1
+                document.getElementById('computer-score').innerText = computerScore;
                 
             } else if (gameResult === outcomeMessages.playerWin){
-                
-            } else if (gameResult === outcomeMessages.tie){
-
+                let currentPoints = document.getElementById('user-score').innerText
+                userScore = parseInt(currentPoints) + 1
+                document.getElementById('user-score').innerText = userScore;
             } else {
                 document.getElementById('error-messages').innerText = gameResult
                 setTimeout(()=>{
@@ -40,5 +45,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 }, 3000)
             }
         }
+    })
+})
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    document.getElementById('reset').addEventListener('click', (event) => {
+        event.preventDefault()
+        document.getElementById('user-score').innerText = 0
+        document.getElementById('computer-score').innerText = 0
+        document.getElementById('rock-paper-scissors-input-user').value = ''
+        document.getElementById('rock-paper-scissors-input-computer').placeholder = ''
     })
 })

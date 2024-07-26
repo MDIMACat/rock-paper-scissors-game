@@ -10,7 +10,7 @@ body {
     font-family: "Odibee Sans", sans-serif;
 }
 
-#image-heading, #score-board-title, #hand-gif, #score-board, #players-icons, #labels, #input, #submit-button, #footer-text, #error-message-section {
+#image-heading, #score-board-title, #hand-gif, #score-board, #players-icons, #labels, #input, #submit-button, #footer-text, #error-message-section, #reset-button {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -125,4 +125,21 @@ body {
 #footer-text a{
     text-decoration: none;
     color: #e77811;
+}
+
+#reset-button button{
+    font-size: 1em;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 20px;
+    padding: 1rem 2rem;
+    background-color: #F4F2F2;
+    box-shadow: 0.5px 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    margin-top: 25px;
+    margin-right: 45px;
+    color: #4b4b4b;
+}
+#reset-button button:hover{
+    background-color: #7ac759;
 }

@@ -23,6 +23,7 @@ body {
     flex-direction: column;
 }
 #welcome-text h1{
+    margin-top: 175px;
     font-size: 3rem;
     letter-spacing: 2px;
 }
@@ -34,9 +35,22 @@ body {
 }
 
 #image-heading img{
-    width: 50rem;
-    height: 50rem;
+    width: 45rem;
+    height: 45rem;
+    animation: heartbeat 3s infinite;
 }
+
+@keyframes heartbeat {
+      0%, 100% {
+        transform: scale(1);
+      }
+      25%, 75% {
+        transform: scale(1.2);
+      }
+      50% {
+        transform: scale(1.5);
+      }
+    }
 
 #score-board-title h2{
     font-size: 3rem;
